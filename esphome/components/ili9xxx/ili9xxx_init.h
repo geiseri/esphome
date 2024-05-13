@@ -319,9 +319,9 @@ static const uint8_t PROGMEM INITCMD_ST7789V[] = {
 static const uint8_t PROGMEM INITCMD_ST7789V2[] = {
     ILI9XXX_SLPOUT, 0x80, // SLPOUT (11h): Sleep Out
     ILI9XXX_DISPON, 0x80, // DISPON (29h): Display On
-    ILI9XXX_PIXFMT, 1, 0x55,  // COLMOD  (3ah): Interface Pixel Format (16bpp) (55?)
+    ILI9XXX_PIXFMT, 1, 0x05,  // COLMOD  (3ah): Interface Pixel Format (16bpp) (55?)
     ILI9XXX_MADCTL, 1, 0x00,  // MADCTL
-    ILI9XXX_FRMCTR2, 5, 0x0B, 0x0B, 0x00, 0x33, 0x35, // PORCTRL  (B2h): Porch Setting
+    ILI9XXX_FRMCTR2, 5, 0x0C, 0x0C, 0x00, 0x33, 0x33, // PORCTRL  (B2h): Porch Setting
     ILI9XXX_ETMOD, 1, 0x11, // GCTRL  (B7h): Gate Control
     0xBB, 1, 0x35, // VCOMS (Bbh): VCOM Setting
     ILI9XXX_PWCTR1, 1, 0x2c, // LCMCTRL (C0h): LCM Control

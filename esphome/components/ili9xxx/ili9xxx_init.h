@@ -316,6 +316,28 @@ static const uint8_t PROGMEM INITCMD_ST7789V[] = {
   0x00                                   // End of list
 };
 
+static const uint8_t PROGMEM INITCMD_ST7789V2[] = {
+    ILI9XXX_MADCTL, 1, 0x00,  // MADCTL
+    ILI9XXX_PIXFMT, 1, 0x05,  // COLMOD  (3ah): Interface Pixel Format (16bpp)
+    ILI9XXX_FRMCTR2, 5, 0x0B, 0x0B, 0x00, 0x33, 0x35, // PORCTRL  (B2h): Porch Setting
+    ILI9XXX_ETMOD, 1, 0x11, // GCTRL  (B7h): Gate Control
+    0xBB, 1, 0x35, // VCOMS (Bbh): VCOM Setting
+    ILI9XXX_PWCTR1, 1, 0x2c, // LCMCTRL (C0h): LCM Control
+    ILI9XXX_PWCTR3, 1, 0x01, // VDVVRHEN (C2h): VDV and VRH Command Enable
+    ILI9XXX_PWCTR4, 1, 0x0d, // VRHS (C3h): VRH Set
+    ILI9XXX_PWCTR5, 1, 0x20, // VDVS (C4h): VDV Set
+    ILI9XXX_IFCTR, 1, 0x13, // FRCTRL2 (C6h): Frame Rate Control in Normal Mode
+    ILI9XXX_PWSET, 2, 0xa4, 0xa1, // PWCTRL1 (D0h): Power Control 1
+    0xD6, 1, 0xA1, // ??
+    ILI9XXX_GMCTRP1, 14, 0xF0, 0x06, 0x0B, 0x0A, 0x09, 0x26, 0x29, 0x33, 0x41, 0x18, 0x16, 0x15, 0x29, 0x2D,  // PVGAMCTRL (E0h): Positive Voltage Gamma Control
+    ILI9XXX_GMCTRN1, 14, 0xF0, 0x04, 0x08, 0x08, 0x07, 0x03, 0x28, 0x32, 0x40, 0x3B, 0x19, 0x18, 0x2A, 0x2E,  // NVGAMCTRL (E1h): Negative Voltage Gamma Control
+    0xE4, 3, 0x25, 0x00, 0x00, // GATECTRL (E4h): Gate Control
+    ILI9XXX_INVON, 0x80, // INVON (21h): Display Inversion On
+    ILI9XXX_SLPOUT, 0x80, // SLPOUT (11h): Sleep Out
+    ILI9XXX_DISPON, 0x80, // DISPON (29h): Display On
+    0x00                                   // End of list
+};
+
 static const uint8_t PROGMEM INITCMD_GC9A01A[] = {
   0xEF, 0,
   0xEB, 1, 0x14, // ?

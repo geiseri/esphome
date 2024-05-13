@@ -158,6 +158,12 @@ class ILI9XXXST7789V : public ILI9XXXDisplay {
   ILI9XXXST7789V() : ILI9XXXDisplay(INITCMD_ST7789V, 240, 320, false) {}
 };
 
+//-----------   ST7789V display --------------
+class ILI9XXXST7789V2 : public ILI9XXXDisplay {
+ public:
+  ILI9XXXST7789V2() : ILI9XXXDisplay(INITCMD_ST7789V2, 240, 280, false) {}
+};
+
 //-----------   ILI9XXX_24_TFT display --------------
 class ILI9XXXILI9341 : public ILI9XXXDisplay {
  public:

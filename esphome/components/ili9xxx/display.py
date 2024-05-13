@@ -65,6 +65,7 @@ MODELS = {
     "ILI9488_A": ili9xxx_ns.class_("ILI9XXXILI9488A", ILI9XXXDisplay),
     "ST7796": ili9xxx_ns.class_("ILI9XXXST7796", ILI9XXXDisplay),
     "ST7789V": ili9xxx_ns.class_("ILI9XXXST7789V", ILI9XXXDisplay),
+    "ST7789V2": ili9xxx_ns.class_("ILI9XXXST7789V2", ILI9XXXDisplay),
     "S3BOX": ili9xxx_ns.class_("ILI9XXXS3Box", ILI9XXXDisplay),
     "S3BOX_LITE": ili9xxx_ns.class_("ILI9XXXS3BoxLite", ILI9XXXDisplay),
     "WAVESHARE_RES_3_5": ili9xxx_ns.class_("WAVESHARERES35", ILI9XXXDisplay),
@@ -103,6 +104,7 @@ def _validate(config):
         "ILI9341",
         "ILI9342",
         "ST7789V",
+        "ST7789V2",
     ]:
         raise cv.Invalid(
             "Provided model can't run on ESP8266. Use an ESP32 with PSRAM onboard"

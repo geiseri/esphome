@@ -40,6 +40,8 @@ def esp32_create_combined_bin(source, target, env):
         new_file_name,
         "--flash_size",
         flash_size,
+        "--fill-flash-size",
+        flash_size
     ]
     if verbose:
         print("    Offset | File")
